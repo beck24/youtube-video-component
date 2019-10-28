@@ -1,0 +1,57 @@
+/**
+ * @prop --youtube-video-bg-color: Background color of any padding around the placeholder image
+ * @prop --youtube-video-pointer: Mouse pointer when hovering over the placeholder image
+ * @prop --youtube-video-icon-wrapper-background: Background color of the icon background
+ * @prop --youtube-video-icon-color: Color of the play icon
+ * @Prop --youtube-video-icon-size: Size of the play icon
+ * @Prop --youtube-video-icon-bg-size: Size of the icon background
+ */
+
+.youtube-video {
+  background-color: var(--youtube-video-bg-color, black);
+}
+
+.placeholder {
+  width: 100%;
+  height: 100%;
+  cursor: var(--youtube-video-pointer, pointer);
+  position: relative;
+}
+
+a.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: var(--youtube-video-icon-bg-size, 35%);
+  padding-bottom: var(--youtube-video-icon-bg-size, 35%);
+  background-color: var(--youtube-video-icon-wrapper-background, rgba(0, 0, 0, 0.5));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.icon-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img.placeholder {
+  position: absolute;
+  object-fit: contain;
+}
+
+.play {
+  position: absolute;
+  height: auto;
+  width: var(--youtube-video-icon-size, 35%);
+  fill: var(--youtube-video-icon-color, white);
+}
