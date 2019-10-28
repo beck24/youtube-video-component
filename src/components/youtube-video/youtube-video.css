@@ -3,8 +3,8 @@
  * @prop --youtube-video-pointer: Mouse pointer when hovering over the placeholder image
  * @prop --youtube-video-icon-wrapper-background: Background color of the icon background
  * @prop --youtube-video-icon-color: Color of the play icon
- * @Prop --youtube-video-icon-size: Size of the play icon
- * @Prop --youtube-video-icon-bg-size: Size of the icon background
+ * @prop --youtube-video-icon-size: Size of the play icon
+ * @prop --youtube-video-icon-bg-size: Size of the icon background
  */
 
 .youtube-video {

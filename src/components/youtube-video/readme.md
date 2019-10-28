@@ -23,12 +23,14 @@ See the demo: https://beck24.github.io/youtube-video-component/
 
 ## CSS Custom Properties
 
-| Name                                      | Description                                                                                                                                   |
-| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `--youtube-video-bg-color`                | Background color of any padding around the placeholder image                                                                                  |
-| `--youtube-video-icon-color`              | Color of the play icon @Prop --youtube-video-icon-size: Size of the play icon @Prop --youtube-video-icon-bg-size: Size of the icon background |
-| `--youtube-video-icon-wrapper-background` | Background color of the icon background                                                                                                       |
-| `--youtube-video-pointer`                 | Mouse pointer when hovering over the placeholder image                                                                                        |
+| Name                                      | Description                                                  |
+| ----------------------------------------- | ------------------------------------------------------------ |
+| `--youtube-video-bg-color`                | Background color of any padding around the placeholder image |
+| `--youtube-video-icon-bg-size`            | Size of the icon background                                  |
+| `--youtube-video-icon-color`              | Color of the play icon                                       |
+| `--youtube-video-icon-size`               | Size of the play icon                                        |
+| `--youtube-video-icon-wrapper-background` | Background color of the icon background                      |
+| `--youtube-video-pointer`                 | Mouse pointer when hovering over the placeholder image       |
 
 
 ----------------------------------------------
