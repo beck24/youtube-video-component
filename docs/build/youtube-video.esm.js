@@ -1,0 +1,1 @@
+import{p as e,b as i}from"./p-bfbe1633.js";e().then(e=>i([["p-6giwb7gy",[[1,"youtube-video",{src:[1],width:[1],height:[1],videoTitle:[1,"video-title"],played:[32]}]]]],e));
