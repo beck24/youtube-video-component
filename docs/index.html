@@ -1,1 +1,8 @@
-<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Youtube Video Component</title>  <link rel="modulepreload" href="/build/p-6giwb7gy.entry.js"><link rel="modulepreload" href="/build/p-bfbe1633.js"><script nomodule="" src="/build/youtube-video.js"></script> </head> <body> <p> <strong>Basic usage</strong> </p><blockquote> &lt;youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" /&gt; </blockquote> <p></p> <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px"></youtube-video><script type="module" data-resources-url="/build/" data-stencil-namespace="youtube-video">import{p as e,b as i}from"/build/p-bfbe1633.js";e().then(e=>i([["p-6giwb7gy",[[1,"youtube-video",{src:[1],width:[1],height:[1],videoTitle:[1,"video-title"],played:[32]}]]]],e));</script></body></html>
+<!doctype html><html dir="ltr" lang="en"><head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"> <title>Youtube Video Component</title> <script type="module" src="./build/youtube-video.esm.js"></script> <script nomodule="" src="./build/youtube-video.js"></script> </head> <body> <p> <strong>Basic usage</strong> </p><blockquote> &lt;youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" /&gt; </blockquote> <p></p> <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px"></youtube-video><script>if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+  // auto-unregister service worker during dev mode
+  navigator.serviceWorker.getRegistration().then(function(registration) {
+    if (registration) {
+      registration.unregister().then(function() { location.reload(true) });
+    }
+  });
+}</script></body></html>

@@ -1,1 +1,0 @@
-System.register(["./p-b9e634ab.system.js"],(function(){"use strict";var e,t;return{setters:[function(i){e=i.p;t=i.b}],execute:function(){e().then((function(e){return t([["p-wnbbfo1k.system",[[1,"youtube-video",{src:[1],width:[1],height:[1],videoTitle:[1,"video-title"],played:[32]}]]]],e)}))}}}));
