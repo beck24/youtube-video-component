@@ -4,6 +4,8 @@ A web component for displaying youtube videos in a lazy-loaded manner.  Displays
 
 By default it takes the size of it's container, but an explicity width/height can be passed as props.
 
+See the demo: https://beck24.github.io/youtube-video-component/
+
 
 
 <!-- Auto Generated Below -->
@@ -11,12 +13,12 @@ By default it takes the size of it's container, but an explicity width/height ca
 
 ## Properties
 
-| Property           | Attribute     | Description | Type     | Default           |
-| ------------------ | ------------- | ----------- | -------- | ----------------- |
-| `height`           | `height`      |             | `string` | `'100%'`          |
-| `src` _(required)_ | `src`         |             | `string` | `undefined`       |
-| `videoTitle`       | `video-title` |             | `string` | `'Youtube Video'` |
-| `width`            | `width`       |             | `string` | `'100%'`          |
+| Property           | Attribute     | Description                  | Type     | Default           |
+| ------------------ | ------------- | ---------------------------- | -------- | ----------------- |
+| `height`           | `height`      | Explicit height of the video | `string` | `'100%'`          |
+| `src` _(required)_ | `src`         | The youtube video URL        | `string` | `undefined`       |
+| `videoTitle`       | `video-title` | Title of the video           | `string` | `'Youtube Video'` |
+| `width`            | `width`       | Explicit width of the video  | `string` | `'100%'`          |
 
 
 ## CSS Custom Properties

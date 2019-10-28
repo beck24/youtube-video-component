@@ -6,9 +6,24 @@ import { Component, h, Prop, State, Element } from '@stencil/core';
   shadow: true
 })
 export class YoutubeVideo {
+  /**
+   * The youtube video URL
+   */
   @Prop() src!: string;
+
+  /**
+   * Explicit width of the video
+   */
   @Prop() width: string = '100%';
+
+  /**
+   * Explicit height of the video
+   */
   @Prop() height: string = '100%';
+
+  /**
+   * Title of the video
+   */
   @Prop() videoTitle: string = 'Youtube Video';
   @State() played: boolean = false;
   @Element() el: HTMLElement;

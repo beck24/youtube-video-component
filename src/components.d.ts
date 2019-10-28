@@ -11,9 +11,21 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface YoutubeVideo {
+    /**
+    * Explicit height of the video
+    */
     'height': string;
+    /**
+    * The youtube video URL
+    */
     'src': string;
+    /**
+    * Title of the video
+    */
     'videoTitle': string;
+    /**
+    * Explicit width of the video
+    */
     'width': string;
   }
 }
@@ -33,9 +45,21 @@ declare global {
 
 declare namespace LocalJSX {
   interface YoutubeVideo {
+    /**
+    * Explicit height of the video
+    */
     'height'?: string;
+    /**
+    * The youtube video URL
+    */
     'src': string;
+    /**
+    * Title of the video
+    */
     'videoTitle'?: string;
+    /**
+    * Explicit width of the video
+    */
     'width'?: string;
   }
 
