@@ -7,9 +7,9 @@ import { Component, h, Prop, State, Element } from '@stencil/core';
 })
 export class YoutubeVideo {
   @Prop() src!: string;
-  // @Prop() videoId!: string;
-  @Prop() width: number;
-  @Prop() height: number;
+  @Prop() width: string = '100%';
+  @Prop() height: string = '100%';
+  @Prop() videoTitle: string = 'Youtube Video';
   @State() played: boolean = false;
   @Element() el: HTMLElement;
 
@@ -31,11 +31,11 @@ export class YoutubeVideo {
     };
 
     if (this.width) {
-      style.width = `${this.width}px`;
+      style.width = `${this.width}`;
     }
 
     if (this.height) {
-      style.height = `${this.height}px`;
+      style.height = `${this.height}`;
     }
 
     return style;
@@ -49,7 +49,7 @@ export class YoutubeVideo {
       height: "100%",
       src: `https://www.youtube.com/embed/${this.videoId}?autoplay=1`,
       frameborder: "0",
-      title: 'Youtube Video'
+      title: this.videoTitle
     };
 
     if (!this.videoId) {
@@ -63,12 +63,14 @@ export class YoutubeVideo {
 
         :
 
-          <a aria-label="Youtube Video" class="placeholder" onClick={() => { this.played = true }}>
+          <a aria-label={this.videoTitle} class="placeholder" onClick={() => { this.played = true }}>
             <img src={`https://i3.ytimg.com/vi/${this.videoId}/hqdefault.jpg`} class="placeholder" alt="Youtube Video" />
 
             <div class="icon-wrapper">
               <div class="icon-container">
-                <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
+                <svg class="play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                  <path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/>
+                </svg>
               </div>
             </div>
           </a>
