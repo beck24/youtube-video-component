@@ -12,7 +12,7 @@ See the component properties/css variables: https://github.com/beck24/youtube-vi
 
 # Installation
 
-## HTML
+## Via script
 
 Include the script in the document head
 
@@ -21,3 +21,9 @@ Include the script in the document head
 Use the component in the body
 
     <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" />
+
+## Via NPM
+
+Install the module
+
+    npm install @beck24/youtube-video
