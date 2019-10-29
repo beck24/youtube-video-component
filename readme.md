@@ -9,3 +9,15 @@ By default it takes the size of its container, but an explicity width/height can
 See the demo: https://beck24.github.io/youtube-video-component/
 
 See the component properties/css variables: https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md
+
+# Installation
+
+## HTML
+
+Include the script in the document head
+
+    <script src="https://unpkg.com/@beck24/youtube-video/dist/youtube-video.js"></script>
+
+Use the component in the body
+
+    <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" />
