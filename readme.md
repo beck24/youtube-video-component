@@ -4,7 +4,7 @@
 
 A web component for displaying youtube videos in a lazy-loaded manner.  Displays and loads only the video thumbnail until the user clicks, then it loads the player and auto-plays.
 
-By default it takes the size of it's container, but an explicity width/height can be passed as props.
+By default it takes the size of its container, but an explicity width/height can be passed as props.
 
 See the demo: https://beck24.github.io/youtube-video-component/
 
