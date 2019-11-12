@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
   <title>Youtube Video Component</title>
 
+  <script src="https://unpkg.com/@beck24/example-code-component/dist/example-code.js"></script>
+
   <script type="module" src="./build/youtube-video.esm.js"></script>
   <script nomodule src="./build/youtube-video.js"></script>
 
@@ -18,21 +20,9 @@
       max-width: 1200px;
     }
 
-    .example-wrapper {
-      display: flex;
-    }
-
-    .show-code {
-      width: 100%;
-    }
-
-    .card {
+    example-code {
+      display: block;
       margin-bottom: 3rem;
-    }
-
-    li.L0, li.L1, li.L2, li.L3,
-    li.L5, li.L6, li.L7, li.L8 {
-      list-style-type: decimal !important;
     }
 
     .tacky-theme {
@@ -62,148 +52,63 @@
 
         <main>
           <section class="layout-width">
-              <div class="card">
-                  <div class="card-header">
-                    <h5>Basic Example</h5>
-                    <p>Explicitly defined height/width</p>
+            <example-code>
+              <div slot="example">
+                <h5>Basic Example</h5>
+                <p>Explicity defined height/width</p>
+
+                <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" />
+              </div>
+
+<pretty-code slot="html" language="html">
+&lt;youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" />
+</pretty-code>
+
+              <div slot="css">
+                  No css for this example.<br>
+                  See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
+              </div>
+            </example-code>
+
+            <example-code>
+              <div slot="example">
+                  <h5>Auto-size Example</h5>
+                  <p>Assumes the container height/width - requires the container to have a defined height/width</p>
+                  <div style="width: 400px; height: 400px">
+                    <youtube-video src="http://youtu.be/C0DPdy98e4c" />
                   </div>
-                  <div class="card-body example-wrapper">
-                    <div class="example">
-                        <youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" />
-                    </div>
-                    <div class="show-code">
-                        <div class="accordion" id="basicExample">
-                            <div class="card">
-                              <div class="card-header" id="headingOne">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    HTML
-                                  </button>
-                                </h2>
-                              </div>
+              </div>
 
-                              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#basicExample">
-                                <div class="card-body">
-                                  <pre class="prettyprint lang-html linenums">&lt;youtube-video src="http://youtu.be/C0DPdy98e4c" width="400px" height="300px" /></pre>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="card">
-                              <div class="card-header" id="headingTwo">
-                                <h2 class="mb-0">
-                                  <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    CSS
-                                  </button>
-                                </h2>
-                              </div>
-                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#basicExample">
-                                <div class="card-body">
-                                  <pre class="prettyprint lang-css">/** no css for this example */</pre>
-                                  See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                      <h5>Auto-size Example</h5>
-                      <p>Assumes the container height/width - requires the container to have a defined height/width</p>
-                    </div>
-                    <div class="card-body example-wrapper">
-                      <div class="example">
-                        <div style="width: 400px; height: 400px">
-                          <youtube-video src="http://youtu.be/C0DPdy98e4c" />
-                        </div>
-                      </div>
-                      <div class="show-code">
-                          <div class="accordion" id="autosizeExample">
-                              <div class="card">
-                                <div class="card-header" id="headingThree">
-                                  <h2 class="mb-0">
-                                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                                      HTML
-                                    </button>
-                                  </h2>
-                                </div>
-
-                                <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#autosizeExample">
-                                  <div class="card-body">
-<pre class="prettyprint lang-html linenums">
+<pretty-code slot="html" language="html">
 &lt;div style="width: 400px; height: 400px">
   &lt;youtube-video src="http://youtu.be/C0DPdy98e4c" />
 &lt;/div>
-</pre>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="card">
-                                <div class="card-header" id="headingFour">
-                                  <h2 class="mb-0">
-                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                      CSS
-                                    </button>
-                                  </h2>
-                                </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#autosizeExample">
-                                  <div class="card-body">
-                                    <pre class="prettyprint lang-css">/** no css for this example */</pre>
-                                    See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                      </div>
-                    </div>
-                  </div>
+</pretty-code>
+
+              <div slot="css">
+                  No css for this example.<br>
+                  See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
+              </div>
+            </example-code>
 
 
-                  <div class="card">
-                      <div class="card-header">
-                        <h5>Custom CSS Example</h5>
-                        <p>Alter the display with some custom css variables</p>
-                      </div>
-                      <div class="card-body example-wrapper">
-                        <div class="example">
-                          <div style="width: 400px; height: 400px">
-                            <youtube-video src="http://youtu.be/C0DPdy98e4c" class="tacky-theme" />
-                          </div>
-                        </div>
-                        <div class="show-code">
-                            <div class="accordion" id="cssExample">
-                                <div class="card">
-                                  <div class="card-header" id="headingFive">
-                                    <h2 class="mb-0">
-                                      <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                                        HTML
-                                      </button>
-                                    </h2>
-                                  </div>
+            <example-code>
+              <div slot="example">
+                <h5>Custom CSS Example</h5>
+                <p>Alter the display with some custom css variables</p>
 
-                                  <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#cssExample">
-                                    <div class="card-body">
-<pre class="prettyprint lang-html linenums">
+                <div style="width: 400px; height: 400px">
+                  <youtube-video src="http://youtu.be/C0DPdy98e4c" class="tacky-theme" />
+                </div>
+              </div>
+
+<pretty-code slot="html" language="html">
 &lt;div style="width: 400px; height: 400px">
   &lt;youtube-video src="http://youtu.be/C0DPdy98e4c" class="tacky-theme" />
 &lt;/div>
-</pre>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="card">
-                                  <div class="card-header" id="headingSix">
-                                    <h2 class="mb-0">
-                                      <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                        CSS
-                                      </button>
-                                    </h2>
-                                  </div>
-                                  <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#cssExample">
-                                    <div class="card-body">
-<pre class="prettyprint lang-css">
+</pretty-code>
+
+<pretty-code slot="css" language="css">
 .tacky-theme {
   --youtube-video-bg-color: yellow;
   --youtube-video-icon-wrapper-background: rgba(255, 115, 0, 0.8);
@@ -211,81 +116,42 @@
   --youtube-video-icon-bg-size: 20%;
   --youtube-video-icon-size: 30%;
 }
-</pre>
-                                      See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                        </div>
-                      </div>
-                    </div>
+</pretty-code>
+            </example-code>
 
 
-                    <div class="card">
-                        <div class="card-header">
-                          <h5>No Play Button</h5>
-                          <p>Hide the play button, show only the video thumbnail</p>
-                        </div>
-                        <div class="card-body example-wrapper">
-                          <div class="example">
-                              <youtube-video
-                                src="http://youtu.be/C0DPdy98e4c"
-                                width="400px"
-                                height="300px"
-                                class="no-button"
-                              />
-                          </div>
-                          <div class="show-code">
-                              <div class="accordion" id="nobuttonExample">
-                                  <div class="card">
-                                    <div class="card-header" id="headingSeven">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
-                                          HTML
-                                        </button>
-                                      </h2>
-                                    </div>
+            <example-code>
+              <div slot="example">
+                <h5>No Play Button</h5>
+                <p>Hide the play button, show only the video thumbnail</p>
 
-                                    <div id="collapseSeven" class="collapse show" aria-labelledby="headingSeven" data-parent="#nobuttonExample">
-                                      <div class="card-body">
-<pre class="prettyprint lang-html linenums">
+                <youtube-video
+                  src="http://youtu.be/C0DPdy98e4c"
+                  width="400px"
+                  height="300px"
+                  class="no-button"
+                />
+              </div>
+
+<pretty-code slot="html" language="html">
 &lt;youtube-video
   src="http://youtu.be/C0DPdy98e4c"
   width="400px"
   height="300px"
   class="no-button"
 />
-</pre>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="card">
-                                    <div class="card-header" id="headingEight">
-                                      <h2 class="mb-0">
-                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                          CSS
-                                        </button>
-                                      </h2>
-                                    </div>
-                                    <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#nobuttonExample">
-                                      <div class="card-body">
-<pre class="prettyprint lang-css">
+</pretty-code>
+
+<pretty-code slot="css" language="css">
 .no-button {
   --youtube-video-icon-wrapper-background: rgba(0, 0, 0, 0);
   --youtube-video-icon-color: transparent;
   --youtube-video-icon-bg-size: 0%;
   --youtube-video-icon-size: 0%;
 }
-</pre>
-                                        See availabe css vars on the <a href="https://github.com/beck24/youtube-video-component/blob/master/src/components/youtube-video/readme.md#css-custom-properties">component documentation</a>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                          </div>
-                        </div>
-                      </div>
+</pretty-code>
+            </example-code>
+
           </section>
         </main>
 
